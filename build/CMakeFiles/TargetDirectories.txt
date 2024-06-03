@@ -1,0 +1,3 @@
+/home/nata/MODULE_5/Practica_5/build/CMakeFiles/Cars.dir
+/home/nata/MODULE_5/Practica_5/build/CMakeFiles/edit_cache.dir
+/home/nata/MODULE_5/Practica_5/build/CMakeFiles/rebuild_cache.dir

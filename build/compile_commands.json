@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/nata/MODULE_5/Practica_5/build",
+  "command": "/usr/bin/g++  -I/home/nata/MODULE_5/Practica_5 -I/home/nata/MODULE_5/Practica_5/build -g -std=gnu++17 -o CMakeFiles/Cars.dir/src/main.cpp.o -c /home/nata/MODULE_5/Practica_5/src/main.cpp",
+  "file": "/home/nata/MODULE_5/Practica_5/src/main.cpp",
+  "output": "CMakeFiles/Cars.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/nata/MODULE_5/Practica_5/build",
+  "command": "/usr/bin/g++  -I/home/nata/MODULE_5/Practica_5 -I/home/nata/MODULE_5/Practica_5/build -g -std=gnu++17 -o CMakeFiles/Cars.dir/src/cars.cpp.o -c /home/nata/MODULE_5/Practica_5/src/cars.cpp",
+  "file": "/home/nata/MODULE_5/Practica_5/src/cars.cpp",
+  "output": "CMakeFiles/Cars.dir/src/cars.cpp.o"
+}
+]
