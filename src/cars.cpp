@@ -43,7 +43,8 @@ Cars::Cars()
         cnt_cars --; 
     }
 
-   // перегрузка оператора <<
+   // перегрузка оператора << дружественная функция
+   
    std::ostream&  operator<< (std::ostream &os, const Cars &c)
     {
        os<< "Марка машины " <<c.car_name << std::endl
@@ -52,15 +53,7 @@ Cars::Cars()
        return os;
     }
 
-   /* std::ostream& Cars::operator<< (std::ostream &os)
-    {
-        os<< "Марка машины " << this->car_name << std::endl
-       << "Число цилиндров  "<< this->cnt_cylinder<< std::endl
-        << "Мощность " << this->power<< std::endl << std::endl;
-       
-       return  os;
-    }*/
-
+  
    
     std::istream& operator >> (std::istream &is,   Cars& c)
     {
@@ -74,11 +67,14 @@ Cars::Cars()
     //перегрузка оператора присвоения
     Cars&   Cars::operator= (const Cars& c)
     {
-         this->car_name = "Moskvich"; //c.car_name;
-         this->cnt_cylinder = 8; //c.cnt_cylinder;
-         this->power = 200; //c.power;
+         if (&c == this)  return *this;
+         
+         this->car_name = c.car_name;
+         this->cnt_cylinder = c.cnt_cylinder;
+         this->power = c.power;
               
          return *this;
+    
     }
     
    void count(Cars &c) //вывод количества объектов

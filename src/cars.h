@@ -10,9 +10,10 @@ class Cars
      
 
     private:
-    std::string car_name; // марка машины
-    int cnt_cylinder; // число цилиндров
-    int power;  // мощность
+    protected:
+    std::string car_name = " Car"; // марка машины
+    int cnt_cylinder = 0; // число цилиндров
+    int power= 0;  // мощность
 
     static  inline int cnt_cars{0} ; // количество созданных объектов  
     
@@ -48,7 +49,7 @@ class Cars
 
    // перегрузка оператора <<
     friend std::ostream& operator << (std::ostream &os, const Cars& c);
-    //std::ostream& operator << (std::ostream &os);
+   
     
     // перегрузка оператора >>
     friend std::istream& operator >> (std::istream &is,  Cars& c);
@@ -57,5 +58,8 @@ class Cars
     Cars&   operator= (const Cars& c);
     
     };
+
+
+   
 
     
