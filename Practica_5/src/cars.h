@@ -48,7 +48,7 @@ class Cars
     ~Cars();
 
    // перегрузка оператора <<
-    friend std::ostream& operator << (std::ostream &os, const Cars& c);
+   //friend std::ostream&  operator << (std::ostream &os, const Cars &c);
    
     
     // перегрузка оператора >>
@@ -58,6 +58,15 @@ class Cars
     Cars&   operator= (const Cars& c);
     
     };
+
+     std::ostream&  operator << (std::ostream &os, const Cars & c)
+    {
+       os<< "Марка машины " << c.get_car_name() << std::endl
+        << "Число цилиндров  "<< c.get_cnt_cylinder()<< std::endl
+        << "Мощность " << c.get_power()<< std::endl << std::endl;
+       return os;
+    }
+
 
 
    
