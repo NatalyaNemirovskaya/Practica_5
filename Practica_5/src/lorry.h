@@ -39,7 +39,7 @@ class Lorry : public Cars
 
     };
 
-    std::ostream& operator << (std::ostream &os, const Lorry& c)
+   std::ostream& operator << (std::ostream &os, const Lorry& c)
     {
           os<< "Марка машины " <<c.car_name << std::endl
         << "Число цилиндров  "<< c.cnt_cylinder<< std::endl
@@ -49,7 +49,7 @@ class Lorry : public Cars
        return os;
     }
 
-    
+     
     
     
 

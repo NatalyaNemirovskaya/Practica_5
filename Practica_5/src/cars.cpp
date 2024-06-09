@@ -45,7 +45,7 @@ Cars::Cars()
 
    // перегрузка оператора << дружественная функция
    
-   std::ostream&  operator<< (std::ostream &os, const Cars &c)
+  std::ostream&  operator<< (std::ostream &os, const Cars &c)
     {
        os<< "Марка машины " <<c.car_name << std::endl
         << "Число цилиндров  "<< c.cnt_cylinder<< std::endl
