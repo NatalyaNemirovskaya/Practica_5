@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/nata/MODULE_5/MATRIX/build",
+  "command": "/usr/bin/g++  -I/home/nata/MODULE_5/MATRIX -I/home/nata/MODULE_5/MATRIX/build -g -std=gnu++17 -o CMakeFiles/Matrix_class.dir/src/main.cpp.o -c /home/nata/MODULE_5/MATRIX/src/main.cpp",
+  "file": "/home/nata/MODULE_5/MATRIX/src/main.cpp",
+  "output": "CMakeFiles/Matrix_class.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/nata/MODULE_5/MATRIX/build",
+  "command": "/usr/bin/g++  -I/home/nata/MODULE_5/MATRIX -I/home/nata/MODULE_5/MATRIX/build -g -std=gnu++17 -o CMakeFiles/Matrix_class.dir/src/matrix.cpp.o -c /home/nata/MODULE_5/MATRIX/src/matrix.cpp",
+  "file": "/home/nata/MODULE_5/MATRIX/src/matrix.cpp",
+  "output": "CMakeFiles/Matrix_class.dir/src/matrix.cpp.o"
+}
+]

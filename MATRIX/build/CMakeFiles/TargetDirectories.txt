@@ -1,0 +1,3 @@
+/home/nata/MODULE_5/MATRIX/build/CMakeFiles/Matrix_class.dir
+/home/nata/MODULE_5/MATRIX/build/CMakeFiles/edit_cache.dir
+/home/nata/MODULE_5/MATRIX/build/CMakeFiles/rebuild_cache.dir

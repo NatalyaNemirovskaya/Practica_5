@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/Matrix_class.dir/src/main.cpp.o CMakeFiles/Matrix_class.dir/src/matrix.cpp.o -o Matrix_class 
