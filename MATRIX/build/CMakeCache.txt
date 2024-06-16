@@ -26,8 +26,8 @@ CMAKE_BUILD_TYPE:STRING=Debug
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-//No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++
+//CXX compiler
+CMAKE_CXX_COMPILER:STRING=/usr/bin/g++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -214,24 +214,6 @@ Matrix_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Matrix_SOURCE_DIR:STATIC=/home/nata/MODULE_5/MATRIX
-
-//Value Computed by CMake
-Matrix__BINARY_DIR:STATIC=/home/nata/MODULE_5/MATRIX/build
-
-//Value Computed by CMake
-Matrix__IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-Matrix__SOURCE_DIR:STATIC=/home/nata/MODULE_5/MATRIX
-
-//Value Computed by CMake
-Matrix_class_BINARY_DIR:STATIC=/home/nata/MODULE_5/MATRIX/build
-
-//Value Computed by CMake
-Matrix_class_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-Matrix_class_SOURCE_DIR:STATIC=/home/nata/MODULE_5/MATRIX
 
 
 ########################

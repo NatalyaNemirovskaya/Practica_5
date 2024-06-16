@@ -265,6 +265,7 @@ CMakeFiles/Matrix_class.dir/src/matrix.cpp.o: /home/nata/MODULE_5/MATRIX/src/mat
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/cstring \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
@@ -304,6 +305,8 @@ CMakeFiles/Matrix_class.dir/src/matrix.cpp.o: /home/nata/MODULE_5/MATRIX/src/mat
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
@@ -388,6 +391,10 @@ CMakeFiles/Matrix_class.dir/src/matrix.cpp.o: /home/nata/MODULE_5/MATRIX/src/mat
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 
+/usr/include/string.h:
+
+/usr/include/c++/13/cstring:
+
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
@@ -447,6 +454,8 @@ CMakeFiles/Matrix_class.dir/src/matrix.cpp.o: /home/nata/MODULE_5/MATRIX/src/mat
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/strings.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
