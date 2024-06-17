@@ -17,6 +17,7 @@ set(sources
    src/main.cpp
    src/cars.h
    src/cars.cpp
+   src/lorry.hpp
 )
 
 target_sources(Cars PRIVATE ${sources})

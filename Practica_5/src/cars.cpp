@@ -1,4 +1,4 @@
-#include <src/cars.h>
+#include "cars.h"
 #include <iostream>
 #include <string>
 #include <cstring>
@@ -43,27 +43,7 @@ Cars::Cars()
         cnt_cars --; 
     }
 
-   // перегрузка оператора << дружественная функция
    
-   std::ostream&  operator<< (std::ostream &os, const Cars &c)
-    {
-       os<< "Марка машины " <<c.car_name << std::endl
-        << "Число цилиндров  "<< c.cnt_cylinder<< std::endl
-        << "Мощность " << c.power<< std::endl << std::endl;
-       return os;
-    }
-
-  
-   
-    std::istream& operator >> (std::istream &is,   Cars& c)
-    {
-        is >> c.car_name;
-        is >> c.cnt_cylinder;
-        is >> c.power;
-        return is;
-
-    }
-
     //перегрузка оператора присвоения
     Cars&   Cars::operator= (const Cars& c)
     {
@@ -77,6 +57,4 @@ Cars::Cars()
     
     }
     
-   void count(Cars &c) //вывод количества объектов
-    {std::cout <<  "Количество объектов" 
-    << c.cnt_cars << std::endl;}
+ 

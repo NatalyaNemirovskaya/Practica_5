@@ -1,4 +1,4 @@
-#include <src/cars.h>
+#include "cars.h"
 #include <string>
 
 class Lorry : public Cars
@@ -28,18 +28,17 @@ class Lorry : public Cars
         
         
 
-       int get_capacity(){return capacity;}
+       int get_capacity() const {return capacity;}
        void set_capacity(int cnt){capacity = cnt;}  
 
 
-     friend std::ostream& operator << (std::ostream &os, const Lorry& c);
+   // friend std::ostream& operator << (std::ostream &os, const Lorry& c);
     
-
-
 
     };
 
-   std::ostream& operator << (std::ostream &os, const Lorry& c)
+ 
+ /* std::ostream& operator << (std::ostream &os, const Lorry& c)
     {
           os<< "Марка машины " <<c.car_name << std::endl
         << "Число цилиндров  "<< c.cnt_cylinder<< std::endl
@@ -47,10 +46,10 @@ class Lorry : public Cars
         << "Емкость " << c.capacity << std:: endl << std::endl;
 
        return os;
-    }
+    } */
 
      
-    
+  
     
 
     

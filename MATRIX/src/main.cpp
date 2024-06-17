@@ -68,10 +68,14 @@ int main()
               << "operator << overloaded  is: " << std::endl;
     std::cout << m << std::endl;
 
+    std::cout << std::endl
+              << "Entered m(2,2): " << std::endl;
     std::cin >> m(2,2);
     std::cout << std::endl
               << "operator >> overloaded  is: " << std::endl;
      std::cout << m << std::endl;
+     std::cout << std::endl
+              << "Entered m(1,2): " << std::endl;
      std::cin >> m(1,2);
      std::cout << m << std::endl;
 

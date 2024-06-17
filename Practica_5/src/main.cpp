@@ -1,8 +1,57 @@
-#include <src/cars.h>
-#include <src/lorry.h>
+#include "cars.h"
+#include "lorry.hpp"
 #include <iostream>
 
+  std::ostream& operator<< (std::ostream& os, const Cars& c) {
+    os << "Марка машины " << c.get_car_name() << std::endl
+        << "Число цилиндров  " << c.get_cnt_cylinder() << std::endl
+        << "Мощность " << c.get_power() << std::endl;
+    return os;
+}
 
+std::ostream& operator<< (std::ostream& os, const Lorry& c) {
+    os << static_cast<const Cars&>(c)
+        << "Емкость " << c.get_capacity() << std::endl << std::endl;
+
+    return os;
+} 
+
+
+//перегрузка оператора  ввода для Cars
+std::istream &operator>>(std::istream &is, Cars &c)
+{
+    std::string name{};
+    int cnt_cylinder{};
+    int power{};
+
+    is >> name;
+    c.set_car_name(name);
+
+    is >> cnt_cylinder;
+    c.set_cnt_cylinder(cnt_cylinder);
+
+    is >> power;
+    c.set_power(power);
+
+    return is;
+}
+
+
+//перегрузка оператора  ввода для Lorry
+std::istream &operator>>(std::istream &is, Lorry &c)
+{
+    is >> static_cast<Cars &>(c);
+
+    int capacity;
+    is >> capacity;
+    c.set_capacity(capacity);
+
+    return is;
+}
+
+int count() {
+    return Cars::cnt_cars;
+}
 
 int main()
 {
@@ -16,7 +65,7 @@ int main()
 
    Cars Volga("Volga", 8,200); //создание объекта конструктор с параметрами
    std::cout <<"вывод значений полей объеккта VOLGA" << std::endl;
-   std::cout << *Volga.get_car_name()<< std::endl; // вывод значений полей
+   std::cout << Volga.get_car_name()<< std::endl; // вывод значений полей
    std::cout << Volga.get_cnt_cylinder()<< std::endl;
    std::cout <<Volga.get_power() << std::endl<< std::endl;
 
@@ -35,7 +84,7 @@ int main()
     std::cout <<"вsвод значений полей LADA1 после присвоения значений LADA" << std::endl;              
     std::cout << Lada1;  //вывод полей
 
-   count(Lada) ;
+   std::cout <<  "количество объектов " << count() << std::endl;
 
     Cars Avto; // новый объект
     std::cout <<"ввод значений полей AVTO" << std::endl;  
@@ -46,7 +95,7 @@ int main()
 
     Lorry Maz("Maz", 8, 200, 400); //объект дочернего класса
     std::cout << "Значения полей объекта MAZ" << std::endl;
-    std::cout << *Maz.get_car_name() << std::endl;
+    std::cout << Maz.get_car_name() << std::endl;
     std::cout << Maz. get_cnt_cylinder() << std::endl;
     std::cout << Maz.get_power() << std:: endl;
      std::cout << Maz.get_capacity() << std::endl;
@@ -54,7 +103,7 @@ int main()
     Lorry Kraz; //объект дочернего класса
     // чтение полей объекта
     std::cout << "Значения полей объекта KRAZ" << std::endl;
-    std::cout << *Kraz.get_car_name() << std::endl;    
+    std::cout << Kraz.get_car_name() << std::endl;    
     std::cout << Kraz. get_cnt_cylinder() << std::endl;
     std::cout << Kraz.get_power() << std:: endl;
     std::cout << Kraz.get_capacity() << std::endl;
@@ -70,16 +119,19 @@ int main()
 
     Maz = Man;
      std::cout << "Значения полей объекта Maz  после присвоения значений MAN" << std::endl;
-    std::cout << *Maz.get_car_name() << std::endl;    
+    std::cout << Maz.get_car_name() << std::endl;    
     std::cout << Maz. get_cnt_cylinder() << std::endl;
     std::cout << Maz.get_power() << std:: endl;
     std::cout << Maz.get_capacity() << std::endl;
 
-    count(Maz); // количество объектов
+    std::cout <<  "количество объектов " << count() << std::endl;
 
-    Lada1.~Cars();  // удаление объектов
-    Volga.~Cars(); // количество объектов
+    {
+    Lorry Avto1(Man);
+    Lorry Avto2(Man);
+    std::cout <<  "количество объектов " << count() << std::endl;
+    }
 
-    count(Maz); // количество объектов
+    std::cout <<  "количество объектов " << count() << std::endl;
     return 0;
 }

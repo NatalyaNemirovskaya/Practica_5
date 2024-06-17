@@ -194,7 +194,7 @@ CMakeFiles/Cars.dir/src/cars.cpp.o: /home/nata/MODULE_5/Practica_5/src/cars.cpp 
 
 CMakeFiles/Cars.dir/src/main.cpp.o: /home/nata/MODULE_5/Practica_5/src/main.cpp \
   /home/nata/MODULE_5/Practica_5/src/cars.h \
-  /home/nata/MODULE_5/Practica_5/src/lorry.h \
+  /home/nata/MODULE_5/Practica_5/src/lorry.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -385,7 +385,7 @@ CMakeFiles/Cars.dir/src/main.cpp.o: /home/nata/MODULE_5/Practica_5/src/main.cpp 
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 
-/home/nata/MODULE_5/Practica_5/src/lorry.h:
+/home/nata/MODULE_5/Practica_5/src/lorry.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
 

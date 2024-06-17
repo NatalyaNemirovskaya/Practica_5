@@ -4,71 +4,42 @@
 #include <cstring>
 #include <iostream>
 
-
 class Cars
-    {
-     
+{
 
-    private:
-    protected:
-    std::string car_name = " Car"; // марка машины
-    int cnt_cylinder = 0; // число цилиндров
-    int power= 0;  // мощность
+   friend int count();
 
-    static  inline int cnt_cars{0} ; // количество созданных объектов  
-    
-    public:
+private:
+   // protected:
+   std::string car_name = " Car"; // марка машины
+   int cnt_cylinder = 0;          // число цилиндров
+   int power = 0;                 // мощность
 
-    std::string* get_car_name(){return &car_name;} //
-    void set_car_name(std::string name){car_name = name;} //
+   static inline int cnt_cars{0}; // количество созданных объектов
 
-    int get_cnt_cylinder(){return cnt_cylinder;}
-    void set_cnt_cylinder(int cnt){cnt_cylinder = cnt;}
+public:
+   std::string get_car_name() const { return car_name; }    //
+   void set_car_name(std::string name) { car_name = name; } //
 
-    int get_power(){return power;}
-    void set_power(int pwr){power = pwr;}
+   int get_cnt_cylinder() const { return cnt_cylinder; }
+   void set_cnt_cylinder(int cnt) { cnt_cylinder = cnt; }
 
-   
-     //friend int count(Cars &c){return  c.cnt_cars;}
-    friend void count(Cars &c);
-     
-     
-    //конструктор без параметров
-    Cars() ;
-  
-    //конструктор с параметрами
-     Cars(std::string name, int cnt_cldr, int pwr);
+   int get_power() const { return power; }
+   void set_power(int pwr) { power = pwr; }
 
-   
-    // конструктор копирования
-    Cars(const Cars &c);
-    
+   // конструктор без параметров
+   Cars();
 
-    //деструктор
-    ~Cars();
+   // конструктор с параметрами
+   Cars(std::string name, int cnt_cldr, int pwr);
 
-   // перегрузка оператора <<
-  friend std::ostream&  operator<< (std::ostream &os, const Cars & c);
-   
-    
-    // перегрузка оператора >>
-    friend std::istream& operator >> (std::istream &is,  Cars& c);
-    
-    //перегрузка оператора =
-    Cars&   operator= (const Cars& c);
-    
-    };
+   // конструктор копирования
+   Cars(const Cars &c);
 
-    /* std::ostream&  operator << (std::ostream &os, const Cars& c)
-    {
-       os<< "Марка машины " << c.get_car_name() << std::endl
-        << "Число цилиндров  "<< c.get_cnt_cylinder()<< std::endl
-        << "Мощность " << c.get_power()<< std::endl << std::endl;
-       return os;
-    }*/
+   // деструктор
+   ~Cars();
 
-
-
-   
-
+   // перегрузка оператора =
+   Cars &operator=(const Cars &c);
+};
     
