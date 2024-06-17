@@ -43,7 +43,15 @@ Cars::Cars()
         cnt_cars --; 
     }
 
-   
+    std::string Cars::get_car_name() const { return car_name; }
+    void Cars::set_car_name(std::string name) { car_name = name; }
+
+    int Cars::get_cnt_cylinder() const { return cnt_cylinder; }
+    void Cars::set_cnt_cylinder(int cnt) { cnt_cylinder = cnt; }
+
+    int Cars::get_power() const { return power; }
+    void Cars::set_power(int pwr) { power = pwr; }
+
     //перегрузка оператора присвоения
     Cars&   Cars::operator= (const Cars& c)
     {

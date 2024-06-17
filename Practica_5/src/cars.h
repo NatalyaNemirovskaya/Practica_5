@@ -18,14 +18,15 @@ private:
    static inline int cnt_cars{0}; // количество созданных объектов
 
 public:
-   std::string get_car_name() const { return car_name; }    //
-   void set_car_name(std::string name) { car_name = name; } //
+  
+   std::string get_car_name() const;  
+   void set_car_name(std::string name); //
 
-   int get_cnt_cylinder() const { return cnt_cylinder; }
-   void set_cnt_cylinder(int cnt) { cnt_cylinder = cnt; }
+   int get_cnt_cylinder() const;
+   void set_cnt_cylinder(int cnt);
 
-   int get_power() const { return power; }
-   void set_power(int pwr) { power = pwr; }
+   int get_power() const;
+   void set_power(int pwr);
 
    // конструктор без параметров
    Cars();
