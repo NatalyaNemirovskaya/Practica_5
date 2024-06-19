@@ -1,9 +1,20 @@
-#include <src/matrix.h>
+#include "matrix.h"
 #include <iostream>
 #include <string>
 #include <cstring>
 
 using namespace math;
+
+Matrix::Matrix()
+{
+
+};
+
+
+Matrix::Matrix(int rows, int cols): rows_(rows),cols_(cols), mvec_(std::vector<real>(cols*rows))
+     {
+
+     };
 
 real& Matrix::operator()(int row, int col)
 {
@@ -150,7 +161,19 @@ Matrix& Matrix::operator*=(const Matrix& M) // перегрузка операт
    return *this;
 }
 
-std::ostream&  math::operator<<(std::ostream& os, const Matrix& M)
+int Matrix::get_n_col() const //return cols_
+{
+  return cols_;
+}
+
+    int Matrix::get_n_row() const //return row
+   {
+      return rows_;
+   }
+
+  
+
+/*std::ostream&  math::operator<<(std::ostream& os, const Matrix& M)
 {
     for(int i = 0; i < M.rows_; ++i)
     {
@@ -162,7 +185,8 @@ std::ostream&  math::operator<<(std::ostream& os, const Matrix& M)
     }
     
    return  os;
-}
+} */
+
 
 /*std::istream &math::operator>>(std::istream &in, Matrix &M)
 {
@@ -173,10 +197,10 @@ std::ostream&  math::operator<<(std::ostream& os, const Matrix& M)
    return in;
 }*/
 
-std::istream &math::operator>>(std::istream &in, math::Matrix &M(int row, int col))
+/*std::istream &math::operator>>(std::istream &in, math::Matrix &M(int row, int col))
 {
 
    in >> *M;
 
    return in;
-}
+}*/

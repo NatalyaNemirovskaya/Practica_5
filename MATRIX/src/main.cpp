@@ -1,5 +1,27 @@
-#include <src/matrix.h>
+#include "matrix.h"
 #include <iostream>
+
+std::ostream &operator<<(std::ostream &os,  const math::Matrix &M) 
+   {
+      for (int i = 0; i < M.get_n_row(); ++i)
+      {
+         for (int j = 0; j < M.get_n_col(); ++j)
+
+         os << M(i, j) << " ";
+
+         os << std::endl;
+      }
+
+      return os;
+   }
+
+   std::istream &  operator>>(std::istream &in, math::Matrix &M(int row, int col))
+{
+
+   in >> *M;
+
+   return in;
+}
 
 
 int main()
@@ -78,6 +100,8 @@ int main()
               << "Entered m(1,2): " << std::endl;
      std::cin >> m(1,2);
      std::cout << m << std::endl;
+
+    
 
     return 0;
 
